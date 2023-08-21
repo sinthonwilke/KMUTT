@@ -1,0 +1,23 @@
+{
+    "files.associations": {
+        "iosfwd": "cpp",
+        "ostream": "cpp",
+        "string": "cpp",
+        "tuple": "cpp",
+        "utility": "cpp",
+        "istream": "cpp",
+        "system_error": "cpp",
+        "xlocale": "cpp",
+        "compare": "cpp",
+        "memory": "cpp",
+        "type_traits": "cpp",
+        "xmemory": "cpp",
+        "xstring": "cpp",
+        "xtr1common": "cpp",
+        "xutility": "cpp",
+        "iostream": "cpp",
+        "xlocinfo": "cpp",
+        "initializer_list": "cpp",
+        "cmath": "cpp"
+    }
+}

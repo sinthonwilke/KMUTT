@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table-container {
+            border: 50px solid black;
+        }
+
+        .table-item {
+            padding: 100px;
+        }
+
+        .bg-black {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <table class="table-container">
+        <tr>
+            <td class="table-item bg-black"></td>
+            <td class="table-item"></td>
+        </tr>
+        <tr>
+            <td class="table-item"></td>
+            <td class="table-item bg-black"></td>
+        </tr>
+    </table>
+
+    <script>
+
+        const tableItems = document.querySelectorAll(".table-item");
+        tableItems.forEach((tableItem) => {
+        tableItem.addEventListener('click', swap);
+        });
+                
+        const swap = () => {
+            tableItems.forEach(tableItem => {
+                tableItem.classList.toggle("bg-black");
+            });
+        };
+
+
+    </script>
+</body>
+</html>

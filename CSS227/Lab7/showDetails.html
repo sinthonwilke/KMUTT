@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .showDetails {
+            color: rgb(70, 62, 134);
+            font-weight: bolder;
+            margin: auto auto;
+            padding-left: 10px;
+            border: 1px solid rgb(70, 62, 134);
+            background-color: rgba(70, 62, 134, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <div class="showDetails"> >>Show details</div>
+        <div class="details" hidden>
+            <ul>
+                <li>ข้อความที่ 1</li>
+                <li>ข้อความที่ 2</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+
+        const details = document.querySelector(".details")
+        const showDetails = document.querySelector(".showDetails")
+        showDetails.addEventListener('click', () => {
+            details.hidden = !details.hidden
+            showDetails.textContent = details.hidden ? '>>Show Details' : ' <<Hide Details'
+        });
+    </script>
+</body>
+</html>

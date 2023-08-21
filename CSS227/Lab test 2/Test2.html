@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+   <title>Test 2</title>
+   <style>
+   #buttons {
+       text-align:center;
+   }
+   #square {
+       position: absolute;
+       top: 150px;
+       left: 100px;
+       width: 200px;
+       height: 200px;
+       border: 2px solid black;
+       padding: 10px;
+       background-color: #e0e0e0;
+}
+div {
+       padding: 10px;
+   }
+   </style>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h1>Positioning Elements</h1>
+    <div id="buttons">
+      <button type="button" name="left" onclick="moveleft()">ซ้าย</button>
+      <button type="button" name="right" onclick="moveright()">ขวา</button>
+      <button type="button" name="up" onclick="moveup()">ขึ้น</button>
+      <button type="button" name="down" onclick="movedown()">ลง</button>
+      <button type="button" name="hide" onclick="movehide()">ซ่อน</button>
+      <button type="button" name="show" onclick="moveshow()">แสดง</button>
+    </div>
+    <hr>
+    <div id="square">
+      กล่องนี้จะขยับจะคำสั่ง
+    </div>
+
+   <script>
+      const square = document.getElementById("square");
+
+      function moveleft() {
+        square.style.left  = square.offsetLeft - 32 + 'px';
+      }
+
+      function moveright() {
+        square.style.left  = square.offsetLeft + 32 + 'px';
+      }
+
+      function moveup() {
+        square.style.top  = square.offsetTop - 32 + 'px';
+      }
+
+      function movedown() {
+        square.style.top  = square.offsetTop + 32 + 'px';
+      }
+
+      function movehide() {
+        square.style.visibility = "hidden";
+      }
+
+      function moveshow() {
+        square.style.visibility = "visible";
+      }
+   </script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Test 1</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <style>
+        .bigDisplay img {
+          width: 500px;
+        }
+
+        .smallDisplay img{
+          width: 250px;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>ข้อควมแบบสุ่ม</h1>
+    <p>เปลี่ยนทุกครั้งที่ Reload</p>
+    <blockquote id="quoteMsg">All cats are black after midnight.</blockquote>
+    <p id="quoteAuthor">Robert A. Heinlein</p>
+    <script></script>
+    <h1>Image Gallery</h1>
+
+  <div class="bigDisplay">
+      <img id="mainImg" src="img/image-0.jpg">
+	</div>
+
+	<div class="smallDisplay" id="imgGroup">
+    <img src="img/image-0.jpg">
+		<img src="img/image-1.jpg">
+		<img src="img/image-2.jpg">
+		<img src="img/image-3.jpg">
+	</div>
+    <p id="lastestUpdate">อัพเดทล่าสุด:</p>
+    
+    
+    <script>
+      window.onload = () => {
+        let rand = Math.floor(Math.random() * 5);
+        let msg, author;
+        if (rand === 0) {
+            msg = "นักเขียนคนที่ 1 เขียนข้อความที่ 1";
+            author = "นักเขียน 1";
+        }
+        else if (rand === 1) {
+            msg = "นักเขียนคนที่ 2 เขียนข้อความที่ 2";
+            author = "นักเขียน 2";
+        }
+        else if (rand === 2) {
+            msg = "นักเขียนคนที่ 3 เขียนข้อความที่ 3";
+            author = "นักเขียน 3";
+        }
+        else {
+            msg = "นักเขียนคนที่ 4 เขียนข้อความที่ 4";
+            author = "นักเขียน 4";
+        }
+
+        quoteMsg.innerText = msg;
+        quoteAuthor.innerText = author
+        lastestUpdate.innerText = "อัพเดทล่าสุด: " + document.lastModified;
+      }
+
+      const quoteMsg = document.getElementById('quoteMsg');
+      const quoteAuthor = document.getElementById('quoteAuthor');
+      const lastestUpdate = document.getElementById('lastestUpdate');
+      const images = document.getElementById('imgGroup').querySelectorAll('img')
+
+      images.forEach((image) => {
+            image.addEventListener('click', () => {
+              document.getElementById('mainImg').src = image.src;
+            });
+        });
+
+    </script>
+  </body>
+</html>

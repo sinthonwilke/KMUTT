@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Test 3</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h1>Business Cards</h1>
+    <div id="bussinessCard">
+    </div>
+
+
+    <script>
+
+      class businessCard {
+        constructor(name, email, address, phone) {
+          this.name = name;
+          this.email = email;
+          this.address = address;
+          this.phone = phone;
+        }
+      }
+
+      const Bcard = document.getElementById('bussinessCard');
+      const person1 = new businessCard('Iron man', 'tony.stark@avengers.com', 'New york, USA', 'xxx-xxx-xxxx');
+      const person2 = new businessCard('Captain America', 'steve.roger@avengers.com', 'Oregon, USA', 'yyy-yyy-yyyy');
+      const person3 = new businessCard('Thor', 'thegodofthunder@avengers.com', 'Main, Asgard', 'zzz-zzz-zzzz');
+      const persons = [person1, person2, person3]
+      const card = document.createElement('p');
+
+      for(const person of persons) {
+        card.innerText += 'Name: ' + person.name + '\n' + 
+                         'Email: ' + person.email + '\n' +
+                         'Address: ' + person.address + '\n' +
+                         'Phone: ' + person.phone + '\n\n';
+        Bcard.append(card);
+      }
+
+    </script>
+  </body>
+</html>

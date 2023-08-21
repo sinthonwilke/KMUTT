@@ -1,0 +1,1 @@
+###Generator สามารถทำงาน iterator ได้คล้ายกับ list ๆลๆ แต่ข้อดีคือการที่ generator ไม่จำเป็นจำต้อง store ข้อมูลลงใน memory

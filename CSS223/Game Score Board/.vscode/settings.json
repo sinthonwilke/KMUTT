@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "xmemory": "cpp",
+        "iostream": "cpp",
+        "xutility": "cpp",
+        "xstring": "cpp",
+        "system_error": "cpp",
+        "type_traits": "cpp",
+        "xtr1common": "cpp",
+        "ostream": "cpp"
+    }
+}
