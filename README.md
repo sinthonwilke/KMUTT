@@ -1,2 +1,2 @@
 # KMUTT
-## Just store all the homework/assignment from university
+## All the assignments from the university.
